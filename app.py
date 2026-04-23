@@ -7,8 +7,8 @@ BASE_DIR = Path(__file__).parent
 
 @st.cache_resource
 def load_models():
-    classification_model = joblib.load(BASE_DIR / 'artifacts_c' / 'placement_prediction_pipeline.pkl')
-    regression_model = joblib.load(BASE_DIR / 'artifacts_r' / 'salary_prediction_pipeline.pkl')
+    classification_model = joblib.load('placement_prediction_pipeline.pkl')
+    regression_model = joblib.load('salary_prediction_pipeline.pkl')
     return classification_model, regression_model
 
 clf_model, reg_model = load_models()
